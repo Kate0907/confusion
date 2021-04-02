@@ -1,18 +1,29 @@
 .carousel {
-  background: #e16ec88e;
+  background: #113cccc0;
 }
 
 .carousel-item {
-  height: 300px;
+  height: 250px;
 }
 /* the img inside .carousel-item */
 .carousel-item img {
   position: absolute;
   top: 0;
   left: 0;
-  min-height: 300px;
-  max-height: 300px;
+  max-height: 250px;
+  /* min-height: 300px;
+  min-width: 250px; */ 
 
+}
+/* this make button in right-bottom corner 右下角  of carousel */
+#carouselButton {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.media img {
+  max-height:105px;
 }
 
 .row-header {
