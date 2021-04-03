@@ -41,7 +41,7 @@
         </ul>
         <!-- button for  login modal -->
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
+          <a id="loginButton">
             <span class="fa fa-sign-in"></span> Login
           </a>
         </span>
@@ -196,7 +196,8 @@
         <div class="col-12 col-sm-3 align-self-center">
           <!-- link to a section of current page -->
           <!-- button for reserve table -->
-          <a role="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+          <!-- deleted data-toggle="modal" -->
+          <a role="button" id="reserveButton" class="btn btn-warning btn-sm btn-block">Reserve Table</a>
         </div>
       </div>
     </div>
@@ -227,7 +228,7 @@
             <div class="carousel-item ">
               <img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
               <div class="carousel-caption  d-none d-md-block">
-                <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                <h2 class="mt-0">Weekend Grand Buffet<span class="badge badge-danger">NEW</span></h2>
                 <p class="d-none d-sm-block">
                   Featuring mouthwatering combinations with a choice of five different
                   salads, six enticing appetizers, six main entrees and five choicest
@@ -386,6 +387,7 @@
     $(document).ready(function () {
 
       $('#mycarousel').carousel({ interval: 2000 }); // 2 sec 
+      //JavaScript for carousel control button
       $('#carouselButton').click(function () {
         if ($('#carouselButton').children('span').hasClass('fa-pause')) {
           $('#mycarousel').carousel('pause');
@@ -397,8 +399,17 @@
           $('#carouselButton').children('span').removeClass('fa-play');
           $('#carouselButton').children('span').addClass('fa-pause');
         }
-
       });
+
+      //JavaScript for Reserve Table button
+      $('#reserveButton').click(function () {
+        $('#reserveModal').modal('show')
+      })
+
+      //JavaScript for Login button
+      $('#loginButton').click(function () {
+        $('#loginModal').modal('show')
+      })
 
     })
   </script>

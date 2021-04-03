@@ -73,6 +73,19 @@ body {
     }
 }
 
+.modal-header {
+    background: $background-dark;
+    color:floralwhite;
+    .close {
+        color:floralwhite;
+    }
+}
+
+.modal-body {
+    background-color: $background-pale;
+
+}
+
 //absolute position elements overlap each other 
 #carouselButton {
     position: absolute;
